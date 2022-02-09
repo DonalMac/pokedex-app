@@ -1,0 +1,401 @@
+/*
+Colors used
+
+Text Color (Dark Gray): #2b2b2b;
+Primary Color (white): white;
+Secondary Color (darkgreen): #96b39a;
+
+https://madlittlemods.github.io/postcss-css-variables/playground/
+http://autoprefixer.github.io/
+
+ */
+
+:root {
+  --primaryText-color: #2b2b2b;
+  --primaryBG-color: white;
+  --secondaryBG-color: white;
+  --primaryBorder-color: white;
+  --font-weight: 700;
+  --font-weight-body: 400;
+  --font-size: 16px;
+  --H-color: #2b2b2b;
+
+  /* Button & Link styles here */
+
+  --primaryButton-color: #357b70;
+  --primaryButtonText-color: white;
+  --buttonHoverText-color: black;
+
+  /* Secondary buttons */
+  --secondaryButton-color: #826664;
+  --secondaryButtonText-color: #96b39a;
+
+  /* NavList color */
+  --NavList-color: grey;
+  --NavListHover-color: #b8b8ff;
+
+  /* link colors */
+  --visitedLink-color: darkgreen;
+  --selectedLink-color: blue;
+
+  /* aList buttons */
+  --aList-color: grey;
+  --aListHover-color: #b8b8ff;
+
+  /* Button & Link styles end */
+
+  --BGcolor-grid__item: white;
+
+  /* Animation color change */
+  --sunColor-1: #edc655;
+  --sunColor-2: #fcffad;
+  --sunColor-3: #f76414;
+
+  /* Animation color end */
+
+  /* Padding */
+  --padding-10: 10px;
+  --padding-5: 5px;
+
+  /* Padding end */
+}
+
+/* Base styles here */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: var(--font-weight-body);
+  font-size: var(--font-size);
+
+  /* Sets the font size to 16px */
+  line-height: 1.6;
+
+  /* Sets the line-height to 1.6 */
+  color: var(--primaryText-color);
+  background-color: var(--primaryBG-color);
+  border: 3px solid var(--primaryBorder-color);
+  margin: auto;
+  min-height: 400px;
+
+  /* margin-bottom: 100px; */
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: bolder;
+  color: var(--H-color);
+  margin: 0;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: var(--font-weight);
+  color: var(--H-color);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: var(--font-weight);
+  color: var(--H-color);
+}
+
+p {
+  font-weight: bolder;
+}
+
+/* Base styles end */
+
+/* page header starts here */
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: var(--padding-10);
+  margin: auto;
+  border-bottom: 2px dotted var(--primaryBorder-color);
+  background: url('../img/art2.svg');
+
+  /* background-color: #cccccc; /* Used if the image is unavailable
+  /*: 500px; /* You must set a specified height */
+
+  border-radius: 6px;
+
+  /* background: rgba(76, 175, 80, 0.3); */
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+  padding-top: 10px;
+}
+
+.navigation-list {
+  list-style-type: none;
+  color: var(--visitedLink-color);
+  font-size: 17px;
+  font-weight: 600;
+
+  /* font-family: 'Marvel', sans-serif; */
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.navigation-list__item {
+  transition: 0.5s;
+}
+
+.navigation-list__item:hover {
+  color: var(--NavListHover-color);
+}
+
+.navigation-list__item--active {
+  text-decoration: none;
+}
+
+/* page header ends here */
+
+.page-footer {
+  flex-shrink: 0;
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-top: 2px dotted var(--primaryBorder-color);
+  background: url('../img/artFooter.svg');
+  border-radius: 6px;
+}
+
+.social-media {
+  /* padding-left: 35px; */
+}
+
+.profile {
+  border: 1px solid var(--primaryBorder-color);
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--padding-10);
+  text-align: left;
+  display: inline;
+}
+
+.profile__portrait {
+  border-radius: 50%;
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  padding-bottom: 10px;
+}
+
+.float-container {
+  max-width: 700px;
+  margin: 0 auto;
+  flex: 1 0 auto;
+}
+
+.float-child {
+  border: 1px solid var(--primaryBorder-color);
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.float-child2 {
+  border: 1px solid var(--primaryBorder-color);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#contact-form {
+  border-radius: 50%;
+  float: left;
+  margin-right: 40px;
+  padding-top: 39px;
+}
+
+a:link {
+  color: var(--NavList-color);
+  padding-right: 15px;
+}
+
+/* mouse over link */
+a:hover,
+a:focus,
+img:hover {
+  color: var(--NavListHover-color);
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* selected link */
+
+a:active {
+  color: var(--selectedLink-color);
+}
+
+.button,
+button {
+  margin: 3rem 1rem;
+  color: white;
+  background: #551a8b;
+  font-family: "Encode Sans", sans-serif;
+  text-decoration: none;
+  transition: 0.5s opacity;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  font-weight: 400;
+  box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+  text-transform: uppercase;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+  color: var(--buttonHoverText-color);
+}
+
+.button__secondary {
+  background-color: var(--secondaryButton-color);
+  color: var(--secondaryButtonText-color);
+}
+
+.button__secondary:hover {
+  opacity: 0.9;
+  color: var(--buttonHoverText-color);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  padding: var(--padding-5);
+  margin: 1rem 5rem;
+}
+
+.grid__item {
+  background-color: var(--BGcolor-grid__item);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  text-align: center;
+  border: 2px solid #3e4756;
+  box-shadow: 0 20px 20px rgb(0 0 0 / 20%);
+}
+
+.grid__item:last-child {
+  grid-column: span 2;
+}
+
+.grid__item:nth-child(3) {
+  grid-row: span 2;
+}
+
+.grid__item:nth-child(4) {
+  grid-row: span 2;
+}
+
+@media all and (max-width: 750px) {
+  /* shared code */
+  .grid {
+    grid-gap: 10px;
+  }
+
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+table {
+  background-color: white;
+  border-radius: 5px;
+  font-weight: var(--font-weight-body);
+  font-size: var(--font-size);
+
+  /* Sets the font size to 16px */
+  line-height: 1.6;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+th {
+  background-color: #364359;
+  color: white;
+  border-radius: 5px;
+}
+
+td {
+  background-color: #ebedf0;
+  border-radius: 5px;
+}
+
+tr {
+  background-color: #d6ebff;
+  border-radius: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) { background-color: #f2f2f2; }
+
+input[type=text],
+textarea,
+[type=Tel],
+[type=Email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #caf504;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
