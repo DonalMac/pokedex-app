@@ -41,19 +41,19 @@ let pokemonList = [
     weight: 4.0,
     type: ['normal']
   }
-]
+];
 
 // for loop loops through length of array
 for (let i = 0; i < pokemonList.length; i++) {
   // writes the pokemon name and height
-  document.write(pokemonList[i].name + ' height:(' + pokemonList[i].height + ')')
+  document.write(pokemonList[i].name + ' height:(' + pokemonList[i].height + ')');
 
   // if the pokemon is larger writes is a larger Pokemon
   if (pokemonList[i].height > '0.6') {
-    document.write(" Wow that's Big!!! <br>")
+    document.write(" Wow that's Big!!! <br>");
 
     // if the pokemon is smaller writes is a smaller Pokemon
   } else {
-    document.write(' is a smaller Pokemon <br>')
+    document.write(' is a smaller Pokemon <br>');
   }
 }
