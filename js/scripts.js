@@ -41,6 +41,12 @@ let pokemonRepository = (function () {
       height: 0.3,
       weight: 4.0,
       type: ['normal']
+    },
+    {
+      name: 'Donal',
+      height: 0.3,
+      weight: 4.0,
+      type: ['normal']
     }
   ];
   function add (item) {
