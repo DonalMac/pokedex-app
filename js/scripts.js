@@ -41,16 +41,16 @@ let pokemonRepository = (function () {
       height: 0.3,
       weight: 4.0,
       type: ['normal']
-    },
-    {
-      name: 'Donal',
-      height: 0.3,
-      weight: 4.0,
-      type: ['normal']
     }
   ];
   function add (item) {
+    // validating type of passed parameter to be an object
+    if (typeof item === 'object' && Object.keys(item)[0] === 'name') {
     pokemonList.push(item);
+        document.write('Pokemon added <br>');
+    } else {
+      document.write('Not an object <br>');
+    }
   }
 
   function getAll () {
@@ -62,6 +62,13 @@ let pokemonRepository = (function () {
     getAll: getAll
   };
 })();
+
+console.log(pokemonRepository.add({
+  name: 'Zoey',
+  height: 0.6,
+  weight: 8.5,
+  type: ['Baby']
+}));
 
 console.log(pokemonRepository.getAll());
 // GetAll() called on repository and iterated through forEach loop
