@@ -261,6 +261,37 @@ button {
   text-transform: uppercase;
 }
 
+.pokemon-list{
+  background:white;
+  width:50%;
+  margin:auto;
+  padding: 0.5rem;
+  border-radius: 5px;
+  list-style-type: none;
+  border: 1px solid black;
+
+}
+
+.JS-button {
+  margin: 0.0rem 0rem;
+  color: white;
+  background:#00000082;
+  font-family: "Encode Sans", sans-serif;
+  text-decoration: none;
+  /*transition: 0.2s opacity;*/
+  display: inline-block;
+  padding: 0.3rem;
+  border-radius: 5px;
+  border-bottom: 1px solid white;
+  font-size: 20px;
+  font-weight: 200;
+  box-shadow: 0 14px 28px rgb(0 0 0 / 25%),inset 0 10px 10px rgb(0 0 0 / 22%);
+  text-transform: none;
+  width:100%;
+  list-style-type: none;
+  text-align: left;
+}
+
 button:hover,
 button:focus,
 .button:hover,
@@ -331,6 +362,9 @@ button:focus,
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+  .pokemon-list{
+    width: 100%;
   }
 }
 
