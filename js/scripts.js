@@ -16,7 +16,7 @@ let pokemonRepository = (function () {
     ) {
       pokemonList.push(item);
     } else {
-      console.log('error/why is this appearing?');
+      console.log('error/why is this appearing?.....because you used add() and it doesnt havea Url key');
     }
   }
 
