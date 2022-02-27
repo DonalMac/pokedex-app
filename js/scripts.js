@@ -119,7 +119,6 @@ let pokemonRepository = (function() {
   // function that gets pokemon details & prints pokemon name to console
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function() {
-      console.log(pokemon);
       showModal(
         pokemon.name,
         pokemon.height,
