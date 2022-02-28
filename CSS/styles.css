@@ -199,6 +199,9 @@ button:focus,
   h1 {
     margin-left: 2rem;
   }
+  div.modal{
+    background: white;
+  }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
