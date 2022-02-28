@@ -163,9 +163,3 @@ pokemonRepository.loadList().then(function() {
     pokemonRepository.addListItem(pokemon);
   });
 });
-
-// GetAll() called on repository and iterated through forEach loop
-pokemonRepository.getAll().forEach(function(pokemon) {
-  // Creates a list of buttons for each pokemon in the repository
-  pokemonRepository.addListItem(pokemon);
-});

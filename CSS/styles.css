@@ -88,6 +88,8 @@ h1 {
   font-weight: bolder;
   color: var(--H-color);
   margin: 0;
+  margin-left: 24rem;
+
 }
 
 h2 {
@@ -112,142 +114,6 @@ span{
 
 /* Base styles end */
 
-/* page header starts here */
-
-.page-header {
-  display: flex;
-  width: 100%;
-  padding: var(--padding-10);
-  margin: auto;
-  border-bottom: 2px dotted var(--primaryBorder-color);
-  background: url('../img/art2.svg');
-
-  /* background-color: #cccccc; /* Used if the image is unavailable
-  /*: 500px; /* You must set a specified height */
-
-  border-radius: 6px;
-
-  /* background: rgba(76, 175, 80, 0.3); */
-}
-
-.page-header__item {
-  flex: 0 1 200px;
-}
-
-.page-header__item:last-child {
-  flex-grow: 1;
-  text-align: right;
-  padding-top: 10px;
-}
-
-.navigation-list {
-  list-style-type: none;
-  color: var(--visitedLink-color);
-  font-size: 17px;
-  font-weight: 600;
-
-  /* font-family: 'Marvel', sans-serif; */
-}
-
-.navigation-list li {
-  display: inline-block;
-  margin-left: 15px;
-}
-
-.navigation-list__item {
-  transition: 0.5s;
-}
-
-.navigation-list__item:hover {
-  color: var(--NavListHover-color);
-}
-
-.navigation-list__item--active {
-  text-decoration: none;
-}
-
-/* page header ends here */
-
-.page-footer {
-  flex-shrink: 0;
-  clear: both;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  border-top: 2px dotted var(--primaryBorder-color);
-  background: url('../img/artFooter.svg');
-  border-radius: 6px;
-}
-
-.social-media {
-  /* padding-left: 35px; */
-}
-
-.profile {
-  border: 1px solid var(--primaryBorder-color);
-  max-width: 700px;
-  margin: 0 auto;
-  padding: var(--padding-10);
-  text-align: left;
-  display: inline;
-}
-
-.profile__portrait {
-  border-radius: 50%;
-  float: left;
-  width: 250px;
-  margin-right: 40px;
-  padding-bottom: 10px;
-}
-
-.float-container {
-  max-width: 700px;
-  margin: 0 auto;
-  flex: 1 0 auto;
-}
-
-.float-child {
-  border: 1px solid var(--primaryBorder-color);
-  max-width: 300px;
-  margin: 0 auto;
-  text-align: left;
-  padding-left: 50px;
-}
-
-.float-child2 {
-  border: 1px solid var(--primaryBorder-color);
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-#contact-form {
-  border-radius: 50%;
-  float: left;
-  margin-right: 40px;
-  padding-top: 39px;
-}
-
-a:link {
-  color: var(--NavList-color);
-  padding-right: 15px;
-}
-
-/* mouse over link */
-a:hover,
-a:focus,
-img:hover {
-  color: var(--NavListHover-color);
-  cursor: pointer;
-  opacity: 0.8;
-}
-
-/* selected link */
-
-a:active {
-  color: var(--selectedLink-color);
-}
-
 .button,
 button {
   /*margin: 3rem 1rem;*/
@@ -255,9 +121,8 @@ button {
   background: #551a8b;
   font-family: "Encode Sans", sans-serif;
   text-decoration: none;
-  transition: 0.5s opacity;
   display: inline-block;
-  padding: 1rem;
+  padding: 0.7rem;
   border-radius: 5px;
   border: none;
   font-weight: 400;
@@ -266,7 +131,7 @@ button {
 }
 
 .pokemon-list{
-  background:#fbff0082;
+  background:red;
   width:50%;
   margin:auto;
   padding: 0.5rem;
@@ -279,7 +144,7 @@ button {
 .JS-button {
   margin: 0.0rem 0rem;
   color: white;
-  background:#004fffb3;
+  background:linear-gradient(89deg, #0061f2 0%, rgb(0 255 161 / 99%) 100%);
   font-family: "Encode Sans", sans-serif;
   text-transform: capitalize;
   /*transition: 0.2s opacity;*/
@@ -304,47 +169,8 @@ button:focus,
 
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
-  background-color:#03caff75;
+  background:linear-gradient(89deg, white 0%, #710000 70%, rgb(0 255 161 / 99%) 100%);
   color: var(--buttonHoverText-color);
-}
-
-.button__secondary {
-  background-color: var(--secondaryButton-color);
-  color: var(--secondaryButtonText-color);
-}
-
-.button__secondary:hover {
-  opacity: 0.9;
-  color: var(--buttonHoverText-color);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1rem;
-  padding: var(--padding-5);
-  margin: 1rem 5rem;
-}
-
-.grid__item {
-  background-color: var(--BGcolor-grid__item);
-  border-radius: 10px;
-  padding: 1rem 2rem;
-  text-align: center;
-  border: 2px solid #3e4756;
-  box-shadow: 0 20px 20px rgb(0 0 0 / 20%);
-}
-
-.grid__item:last-child {
-  grid-column: span 2;
-}
-
-.grid__item:nth-child(3) {
-  grid-row: span 2;
-}
-
-.grid__item:nth-child(4) {
-  grid-row: span 2;
 }
 
 @media all and (max-width: 750px) {
@@ -370,72 +196,15 @@ button:focus,
   .pokemon-list{
     width: 100%;
   }
+  h1 {
+    margin-left: 2rem;
+  }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
-}
-
-table {
-  background-color: white;
-  border-radius: 5px;
-  font-weight: var(--font-weight-body);
-  font-size: var(--font-size);
-
-  /* Sets the font size to 16px */
-  line-height: 1.6;
-  width: 100%;
-  padding-bottom: 10px;
-}
-
-th {
-  background-color: #364359;
-  color: white;
-  border-radius: 5px;
-}
-
-td {
-  background-color: #ebedf0;
-  border-radius: 5px;
-}
-
-tr {
-  background-color: #d6ebff;
-  border-radius: 5px;
-  border-bottom: 1px solid #ddd;
-}
-
-tr:nth-child(even) { background-color: #f2f2f2; }
-
-input[type=text],
-textarea,
-[type=Tel],
-[type=Email] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  background-color: #f2f2f2;
-}
-
-input[type=submit] {
-  width: 100%;
-  background-color: #caf504;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
 }
 
 #modal-container {
@@ -472,15 +241,17 @@ input[type=submit]:hover {
   width: 100%;
   max-width: 700px;
   text-align: left;
+  background:linear-gradient(89deg, #ebedf0 0%, #710000 80%, white 100%);
+  border-radius: 3px;
 }
 
 .modal-close {
   float: right;
   -webkit-appearance: none;
   border: 0;
-  background: black;
-  /*color: #777;*/
-  text-decoration: underline;
+  background: #1600d0;
+  color: white;
+  text-decoration: none;
 }
 
 .modal img {
@@ -491,9 +262,15 @@ input[type=submit]:hover {
   margin-top: 0;
   text-decoration:underline overline;
   text-transform: capitalize;
+  margin-left: 0;
 }
 
 .modal p {
   margin-bottom: 0;
   line-height: 0.9;
+}
+
+.modal button:hover{
+  background: red;
+  color:white;
 }
