@@ -1,34 +1,54 @@
-:root{--primary-color:black}
-header{font-size:2em;padding:10px;text-align:center}
-body{
-  background:linear-gradient(89deg, #0061f2 0%, rgb(0 255 161 / 99%) 100%);
-  color:var(--primary-color);
-  font-size:1.5rem;
-
+ :root {
+    --primary-color:black;
+}
+header {
+    font-size: 2em;
+    padding: 10px;
+    text-align: center;
+}
+body {
+    background: linear-gradient(89deg, #0061f2 0%, rgb(0 255 161 / 99%) 100%);
+    color: var(--primary-color);
+    font-size: 1.5rem;
 }
 
-h1{text-align:center;padding:10px}
-nav h2{font-size:2em;font-family: "Goudy Bookletter 1911" sans-serif;
-  color:white}
-  span{
-    color:black;
-    }
-p{text-align:center}
-.pokemon-modal-image{width:25%}
-nav{background-color:#fc0}
-button.btn-outline-dark{
-  text-transform:capitalize;
-    margin:2px;
-    min-width:200px;
+h1 {
+    text-align: center;
+    padding: 10px;
+}
+nav h2 {
+    font-size: 2em;
+    font-family: 'Goudy Bookletter 1911' sans-serif;
+    color: white;
+}
+span {
+    color: black;
+}
+p {
+    text-align: center;
+}
+.pokemon-modal-image {
+    width: 25%;
+}
+nav {
+    background-color: #fc0;
+}
+button.btn-outline-dark {
+    text-transform: capitalize;
+    margin: 2px;
+    min-width: 200px;
     border-radius: 3px;
-  }
+}
 
-  .group-list-item{
+.group-list-item {
     list-style-type: none;
+}
 
-  }
-
-  @media all and (max-width: 500px) {
-    .btn-outline-dark{width:100%;}
-    .list-group{display: block;}
-  }
+@media all and (max-width: 500px) {
+    .btn-outline-dark {
+        width: 100%;
+    }
+    .list-group {
+        display: block;
+    }
+}
