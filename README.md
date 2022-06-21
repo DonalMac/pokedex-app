@@ -48,7 +48,7 @@ The details for each item shall be:
 
 ---
 
-## smallPokedex mainpage:
+## Pokedex mainpage:
 
 [Link to Homepage](https://DonalMac.github.io/pokedex-app/)
 
