@@ -50,6 +50,6 @@ The details for each item shall be:
 
 ## smallPokedex mainpage:
 
-[Link to Homepage]([[https://DonalMac.github.io/pokedex-app/]
+[Link to Homepage](https://DonalMac.github.io/pokedex-app/)
 
 ![HomePage](./img/Screenshot_Pokemon.png)
