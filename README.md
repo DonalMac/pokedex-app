@@ -52,4 +52,4 @@ The details for each item shall be:
 
 [Link to Homepage]([https://marcel-patrick.github.io/smallPokedex/](https://DonalMac.github.io/pokedex-app/))
 
-![HomePage](./src/img/Screenshot_Pokemon.png)
+![HomePage](./img/Screenshot_Pokemon.png)
